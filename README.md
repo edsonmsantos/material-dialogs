@@ -3,7 +3,13 @@
 Biblioteca Javascript para dialogs estilizados com Material Design sem dependências.
 
 ## Instalação
-
+Instale com npm ou yarn
+````shell
+npm i material-dialogs --save
+````
+````shell
+yarn add material-dialogs
+````
 
 Importe em seu projeto
 
