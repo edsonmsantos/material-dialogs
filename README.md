@@ -1,9 +1,9 @@
 # Material Dialogs
 
-Biblioteca Javascript para dialogs estilizados com Material Design sem dependências.
+Javascript library for styled dialogs with Material Design without dependencies.
 
-## Instalação
-Instale com npm ou yarn
+## Install
+Install with npm or yarn
 ````shell
 npm i material-dialogs --save
 ````
@@ -11,14 +11,14 @@ npm i material-dialogs --save
 yarn add material-dialogs
 ````
 
-Importe em seu projeto
+Import into your project
 
 **ES6**
 ````shell
 import {xAlert, xConfirm, xPrompt} from 'material-dialogs.js';
 ````
 
-Caso esteja trabalhando com página HTML padrão sem biblioteca, você pode utilizar o seguinte:
+If you are working with a standard HTML page without a library, you can use the following:
 ````html
 <script type="module">
     import {xAlert} from "/node_modules/material-dialogs/material-dialogs.js";
@@ -31,18 +31,19 @@ Caso esteja trabalhando com página HTML padrão sem biblioteca, você pode util
 </script>
 ````
 
-## Modo de uso
+## How to use
 
-Todas as funções retornam uma promise, ou seja, você pode executar uma ação condicionalmente a ação do usuário, veja os exemplos abaixo:
+All functions return a promise, that is, you can perform an action conditionally on the user's action,
+See the examples below:
 
-### Alerta
+### Alert
 
-Sem ação
+No action
 ````javascript
 xAlert({title: 'Alert', message: 'Are you sure?'});
 ````
 
-Com ação ao clicar no botão
+With action when clicking the button
 ````javascript
 xAlert({title: 'Alert', message: 'Are you sure?', textConfirm: 'Yes', textCancel: 'No'}).then(() => {
     console.log('alert');
@@ -51,7 +52,7 @@ xAlert({title: 'Alert', message: 'Are you sure?', textConfirm: 'Yes', textCancel
 });
 ````
 
-### Confirmação
+### Confirm
 
 ````javascript
 xConfirm({title: 'Confirm', message: 'Are you sure?', textConfirm: 'Yes', textCancel: 'No'}).then(() => {
@@ -71,7 +72,7 @@ xPrompt({title: 'Prompt', message: 'Enter your name', textConfirm: 'Save', textC
 });
 ````
 
-### Personalizado
+### Custom
 ````javascript
 const formDemo = `<form>
                     <div class="xmodal-input">
@@ -94,4 +95,4 @@ const formDemo = `<form>
         });
 ````
 
-Para mais detalhes, consulte o arquivo de exemplo `demo\index.html`
+For more details, see the example file `demo\index.html`
