@@ -18,9 +18,17 @@ Importe em seu projeto
 import {xAlert, xConfirm, xPrompt} from 'material-dialogs.js';
 ````
 
-Ou adicione no script do seu projeto
+Caso esteja trabalhando com página HTML padrão sem biblioteca, você pode utilizar o seguinte:
 ````html
-<script src="material-dialogs.js" type="module"></script>
+<script type="module">
+    import {xAlert} from "/node_modules/material-dialogs/material-dialogs.js";
+
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        xAlert({title: 'Alert', message: 'Are you sure?'});
+    })
+    //...
+</script>
 ````
 
 ## Modo de uso
