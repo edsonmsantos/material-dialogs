@@ -1,0 +1,26 @@
+{
+  "name": "material-dialogs",
+  "version": "1.0.0",
+  "description": "Javascript library for styled dialogs with Material Design without dependencies.",
+  "main": "material-dialogs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edsonmsantos/material-dialogs.git"
+  },
+  "keywords": [
+    "dialog",
+    "prompt",
+    "alert",
+    "material",
+    "confirm"
+  ],
+  "author": "Edson Santos <edsonlucianoms@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edsonmsantos/material-dialogs/issues"
+  },
+  "homepage": "https://github.com/edsonmsantos/material-dialogs#readme"
+}
