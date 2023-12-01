@@ -15,7 +15,7 @@ Importe em seu projeto
 
 **ES6**
 ````shell
-import {xAlert, xConfirm, xPrompt} from '@material/x-dialogs';
+import {xAlert, xConfirm, xPrompt} from 'material-dialogs.js';
 ````
 
 Ou adicione no script do seu projeto
