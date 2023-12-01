@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo XMaterial Dialogs</title>
+</head>
+<body>
+    <button id="alert">Altert</button>
+    <button id="confirm">Confirm</button>
+    <button id="prompt">Prompt</button>
+    <button id="personalizedContent">Personalized</button>
+    <button id="notAllowCloseInClickBackdrop">Not Allow Close In Click Backdrop</button>
+    <script src="../material-dialogs.js" type="module"></script>
+    <script>
+        const alert = document.getElementById('alert');
+        const confirm = document.getElementById('confirm');
+        const prompt = document.getElementById('prompt');
+        const personalizedContent = document.getElementById('personalizedContent');
+        const notAllowCloseInClickBackdrop = document.getElementById('notAllowCloseInClickBackdrop');
+
+        alert.addEventListener('click', () => {
+            xAlert({title: 'Alert', message: 'Are you sure?'}).then(() => {
+                console.log('alert');
+            });
+        });
+
+        confirm.addEventListener('click', () => {
+            xConfirm({title: 'Confirm', message: 'Are you sure?', textConfirm: 'Yes', textCancel: 'No'}).then(() => {
+                console.log('confirm');
+            }).catch(() => {
+                console.log('cancel');
+            });
+        });
+
+        prompt.addEventListener('click', () => {
+            xPrompt({title: 'Prompt', message: 'Enter your name', textConfirm: 'Save', textCancel: 'Cancel', value: 'Mark'}).then((value) => {
+                console.log(value);
+            }).catch(() => {
+                console.log('cancel');
+            })
+        });
+
+        personalizedContent.addEventListener('click', () => {
+            const formDemo = `
+                <form>
+                    <div class="xmodal-input">
+                        <label for="name">Name</label><br>
+                        <input type="text" class="xmodal-input" name="name"><br>
+                    </div> 
+                    <div class="xmodal-input">
+                        <label for="email">Email</label><br>
+                        <input type="email" class="xmodal-input" name="email"><br>
+                    </div>
+                    <div class="xmodal-buttons">
+                        <button type="submit" class="xmodal-button">Submit</button>
+                    </div>
+                </form>`;
+           xAlert({title: 'Personalized', message: formDemo, textConfirm: null}).then(() => {
+               console.log('alert');
+           }).catch(() => {
+               console.log('cancel');
+           });
+        });
+
+        notAllowCloseInClickBackdrop.addEventListener('click', () => {
+            xPrompt({title: 'Prompt', message: 'Enter your name', textConfirm: 'Save', textCancel: 'Cancel', value: 'Mark', allowCloseClickBackdrop: false}).then((value) => {
+                console.log(value);
+            })
+        })
+    </script>
+</body>
+</html>
