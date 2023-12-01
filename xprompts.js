@@ -2,7 +2,7 @@
       const buttonConfirm = document.querySelector('#confirm');
         const buttonPrompt = document.querySelector('#prompt');
         buttonConfirm.addEventListener('click', () => {
-            confirm('Title', 'Message').then(() => {
+            xConfirm('Title', 'Message').then(() => {
                 console.log('Confirmed')
             }).catch(() => {
                 console.log('Canceled')
@@ -63,6 +63,7 @@
                     </div>
                 `;
                 document.body.appendChild(modal);
+                document.querySelector('.xmodal-input input').focus();
                 modal.querySelector('.xmodal-button-confirm').addEventListener('click', () => {
                     resolve(modal.querySelector('.xmodal-input input').value);
                     modal.remove();    
