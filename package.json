@@ -1,6 +1,6 @@
 {
   "name": "material-dialogs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Javascript library for styled dialogs with Material Design without dependencies.",
   "main": "material-dialogs.js",
   "scripts": {
