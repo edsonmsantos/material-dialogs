@@ -105,7 +105,7 @@ export const xAlert = ({title, message = '', textConfirm = 'Ok', allowCloseClick
     });
 }
 
-const loadStyles = (isAlert = false) => {
+const loadStyles = (isAlert = false, zIndex = 9999) => {
     const styleNotAlert = !isAlert ? 'padding-left: 24px;' : '';
     const styleContent = `.xmodal {
         position: fixed;
@@ -118,6 +118,7 @@ const loadStyles = (isAlert = false) => {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        z-index: ${zIndex};
     }
     
     .xmodal-content {
