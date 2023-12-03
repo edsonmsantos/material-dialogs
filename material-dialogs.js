@@ -44,6 +44,7 @@ export const xConfirm = ({title, message = '', textCancel = 'Cancelar', textConf
 
 export const xPrompt = ({title, message = '', placeholder = '', value = '', textCancel = 'Cancelar', textConfirm = 'Confirmar', allowCloseClickBackdrop = true}) => {
     loadStyles();
+    const tempId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
     return new Promise((resolve, reject) => {
         const modal = makeModalDefault(reject, allowCloseClickBackdrop);
         modal.innerHTML = `
@@ -52,7 +53,7 @@ export const xPrompt = ({title, message = '', placeholder = '', value = '', text
                             <div class="xmodal-title">${title}</div>
                             <div class="xmodal-message">${message}</div>
                             <div class="xmodal-input">
-                                <input type="text" value="${value}" placeholder="${placeholder}">
+                                <input type="text" id="${tempId}" placeholder="${placeholder}">
                             </div>
                             <div class="xmodal-buttons">
                                 <button class="xmodal-button xmodal-button-cancel">${textCancel}</button>
@@ -62,6 +63,7 @@ export const xPrompt = ({title, message = '', placeholder = '', value = '', text
                     </div>
                 `;
         document.body.appendChild(modal);
+        document.getElementById(tempId).value = value;
         document.querySelector('.xmodal-input input').focus();
         modal.querySelector('.xmodal-button-confirm').addEventListener('click', () => {
             resolve(modal.querySelector('.xmodal-input input').value);
