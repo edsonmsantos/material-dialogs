@@ -11,8 +11,8 @@
     <button id="prompt">Prompt</button>
     <button id="personalizedContent">Personalized</button>
     <button id="notAllowCloseInClickBackdrop">Not Allow Close In Click Backdrop</button>
-    <script src="../material-dialogs.js" type="module"></script>
-    <script>
+    <script type="module">
+        import {xAlert, xConfirm, xPrompt} from '../material-dialogs.js';
         const alert = document.getElementById('alert');
         const confirm = document.getElementById('confirm');
         const prompt = document.getElementById('prompt');
