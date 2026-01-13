@@ -5,6 +5,8 @@
 
 Modern **Material Design 3** dialogs for web applications. Lightweight, accessible, and fully customizable.
 
+Demo: [Live Demo](https://material-dialogs.vercel.app/)
+
 ## 🎨 Features
 
 - ✨ **Material Design 3** - Modern and consistent styling
