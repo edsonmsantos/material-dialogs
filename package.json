@@ -1,8 +1,10 @@
 {
   "name": "material-dialogs",
-  "version": "1.0.9",
-  "description": "Javascript library for styled dialogs with Material Design without dependencies.",
+  "version": "2.0.0",
+  "description": "Modern Material Design 3 dialogs for web applications. Lightweight, accessible, and customizable with dark mode support.",
   "main": "material-dialogs.js",
+  "module": "material-dialogs.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,13 +16,27 @@
     "dialog",
     "prompt",
     "alert",
-    "material",
-    "confirm"
+    "confirm",
+    "modal",
+    "material-design",
+    "material-design-3",
+    "ui",
+    "component",
+    "javascript",
+    "vanilla-js",
+    "lightweight",
+    "accessible",
+    "a11y",
+    "dark-mode",
+    "theme"
   ],
   "author": "Edson Santos <edsonlucianoms@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/edsonmsantos/material-dialogs/issues"
   },
-  "homepage": "https://github.com/edsonmsantos/material-dialogs#readme"
+  "homepage": "https://github.com/edsonmsantos/material-dialogs#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  }
 }
